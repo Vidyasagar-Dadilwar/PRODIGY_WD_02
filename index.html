@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch Web Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" type="image/png" href="./icon.png">
+</head>
+
+<body class="bg-gray-100">
+    <div class="container p-4 max-w-md rnd shadow-md">
+        <!-- Container for Stopwatch -->
+        <div class="border border-gray-300 rounded-full shadow-md p-4 mb-6 text-center inn">
+            <h2 class="text-4xl font-bold font-serif text-black mb-4 tracking-wide uppercase">Stopwatch</h2>
+
+            <!-- Stopwatch Display -->
+            <div id="stopwatch" class="flex justify-center items-center mb-6">
+                <div class="bg-black text-white font-mono text-4xl rounded-full p-4">
+                    <span id="display">00:00:00.000</span>
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="flex justify-center space-x-4 buttons">
+                <button id="startBtn" onclick="startStopwatch()" class="btn-start">
+                    <i class="fas fa-play"></i> Start
+                </button>
+                <button id="pauseBtn" onclick="pauseStopwatch()" class="btn-pause">
+                    <i class="fas fa-pause"></i> Pause
+                </button>
+                <button id="resetBtn" onclick="resetStopwatch()" class="btn-reset">
+                    <i class="fas fa-stop"></i> Reset
+                </button>
+                <button id="lapBtn" onclick="recordLap()" class="btn-lap">
+                    <i class="fas fa-flag"></i> Lap
+                </button>
+            </div>
+        </div>
+
+        <!-- Lap Times -->
+        <div id="lapTimes" class="lap-times">
+            <!-- Lap times will be displayed here -->
+        </div>
+    </div>  
+    <script src="script.js"></script>
+</body>
+</html>
